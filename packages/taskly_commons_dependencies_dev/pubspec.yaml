@@ -1,0 +1,12 @@
+name: taskly_commons_dependencies_dev
+description: Common dependencies for Taskly development.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dev_dependencies:
+  flutter:
+    sdk: flutter
+  flutter_lints: ^5.0.0
