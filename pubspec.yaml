@@ -9,11 +9,44 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+  
+  # Local Database
+  drift: ^2.14.1
+  sqlite3_flutter_libs: ^0.5.0
+  path_provider: ^2.1.2
+  path: ^1.8.3
+  
+  # Code Generation
+  freezed_annotation: ^2.4.1
+
+  # Micro packages
+  taskly_ui:
+    path: packages/taskly_ui
+  
+  # Slang
+  slang_flutter: ^4.8.0
+  slang: ^4.8.1
+  copy_with_extension: ^6.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+
+  taskly_commons_dependencies_dev:
+    path: packages/taskly_commons_dependencies_dev
+
+  # Code Generation
+  build_runner: ^2.4.7
+  drift_dev: ^2.14.1
+  riverpod_generator: ^2.3.9
+  freezed: ^2.4.6
+  slang_build_runner: ^4.8.0
+  copy_with_extension_gen: ^6.0.1
 
 flutter:
   uses-material-design: true
