@@ -48,3 +48,7 @@ app.*.map.json
 /generated_plugin_registrant.dart
 *.g.dart
 *.freezed.dart
+
+# Env files
+env.*.json
+!env.example.json
