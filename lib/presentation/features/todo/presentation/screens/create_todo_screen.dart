@@ -138,32 +138,12 @@ class _CreateTodoScreenState extends ConsumerState<CreateTodoScreen> {
       child: _isLoading && _todoToEdit == null
           ? const Center(child: CircularProgressIndicator())
           : _errorMessage != null && _todoToEdit == null
-          ? _buildErrorWidget()
+          ? CustomErrorWidget(
+              errorMessage: t.commons.errors.unknown,
+              retryMessage: t.commons.actions.retry,
+              onRetry: widget.todoId != null ? _loadTodo : null,
+            )
           : _buildForm(),
-    );
-  }
-
-  Widget _buildErrorWidget() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.error_outline, size: 70, color: context.colorScheme.error),
-          verticalSpaceRegular,
-          Text(
-            _errorMessage!,
-            style: context.textTheme.bodyLarge?.copyWith(
-              color: context.colorScheme.onSurfaceVariant,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          verticalSpaceRegular,
-          CustomPrimaryButton(
-            text: 'Retry',
-            onPressed: widget.todoId != null ? _loadTodo : null,
-          ),
-        ],
-      ),
     );
   }
 

@@ -27,11 +27,19 @@ class TodoDetailsScreen extends ConsumerWidget {
       child: SingleChildScrollView(
         child: todoAsyncValue.when(
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (error, stackTrace) =>
-              _buildErrorWidget(context, error.toString()),
+          error: (_, _) => CustomErrorWidget(
+            errorMessage: t.commons.errors.unknown,
+            retryMessage: t.commons.actions.retry,
+            onRetry: () => Navigator.pop(context),
+          ),
+          // _buildErrorWidget(context, error.toString()),
           data: (todo) => todo != null
               ? _buildTodoDetails(context, todo, ref)
-              : _buildErrorWidget(context, 'Todo not found'),
+              : CustomErrorWidget(
+                  errorMessage: t.commons.errors.unknown,
+                  retryMessage: t.commons.actions.retry,
+                  onRetry: () => Navigator.pop(context),
+                ),
         ),
       ),
     );
@@ -218,25 +226,6 @@ class TodoDetailsScreen extends ConsumerWidget {
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildErrorWidget(BuildContext context, String error) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.error_outline, size: 70, color: context.colorScheme.error),
-          verticalSpaceRegular,
-          Text(
-            'Error: $error',
-            style: context.textTheme.bodyLarge?.copyWith(
-              color: context.colorScheme.onSurfaceVariant,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
     );
   }
 
