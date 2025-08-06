@@ -1,5 +1,5 @@
 import 'package:taskly_api_client/taskly_api_client.dart'
-    show APIPaths, HttpClientImpl;
+    show APIPaths, HttpClientInterface;
 
 import '../models/todo_model.dart';
 
@@ -8,9 +8,9 @@ abstract class TodoRemoteDataSource {
 }
 
 class TodoApiDatasource implements TodoRemoteDataSource {
-  final HttpClientImpl _http;
+  final HttpClientInterface _http;
 
-  const TodoApiDatasource({required HttpClientImpl http}) : _http = http;
+  const TodoApiDatasource({required HttpClientInterface http}) : _http = http;
 
   @override
   Future<List<TodoModel>> getAllTodos() async {
