@@ -1,0 +1,51 @@
+{
+  "details": {
+    "sections": {
+      "status": {
+        "title": "Estado"
+      },
+      "information": {
+        "title": "Información"
+      },
+      "actions": {
+        "title": "Acciones",
+        "edit": "Editar",
+        "delete": "Eliminar"
+      },
+      "details": {
+        "title": "Detalles",
+        "fields": {
+          "createdAt": "Creado el",
+          "updatedAt": "Actualizado el"
+        }
+      }
+    },
+    "title": "Detalles de la tarea",
+    "deleteConfirmation": {
+      "title": "Confirmar eliminación",
+      "message": "¿Estás seguro de que deseas eliminarlo?",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar"
+    }
+  },
+  "create": {
+    "createTitle": "Crear tarea",
+    "updateTitle": "Actualizar tarea",
+    "fields": {
+      "title": {
+        "label": "Título",
+        "hint": "Ingresa el título de la tarea",
+        "required": "El título es obligatorio",
+        "minLength": "El título debe tener al menos 3 caracteres"
+      },
+      "description": {
+        "label": "Descripción",
+        "hint": "Ingresa la descripción de la tarea"
+      }
+    },
+    "actions": {
+      "create": "Crear",
+      "update": "Actualizar"
+    }
+  }
+}

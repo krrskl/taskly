@@ -1,0 +1,17 @@
+{
+  "steps": {
+    "welcome": {
+      "title": "Bienvenido a Taskly",
+      "description": "Taskly es tu gestor de tareas personal, ayudándote a mantenerte organizado y productivo."
+    },
+    "features": {
+      "title": "Características",
+      "description": "Descubre las potentes características de Taskly que facilitan la gestión de tareas."
+    },
+    "get_started": {
+      "title": "Listo para empezar?",
+      "description": "Vamos a configurar tu cuenta y ponerte en marcha con Taskly.",
+      "button": "Empezar"
+    }
+  }
+}

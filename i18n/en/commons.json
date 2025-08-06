@@ -1,0 +1,12 @@
+{
+  "status": {
+    "completed": "Completed",
+    "pending": "Pending"
+  },
+  "errors": {
+    "unknown": "An unknown error occurred. \nPlease try again later."
+  },
+  "actions": {
+    "retry": "Retry"
+  }
+}

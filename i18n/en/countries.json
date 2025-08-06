@@ -1,0 +1,17 @@
+{
+  "title": "Countries",
+  "loading": "Loading countries...",
+  "empty": "No countries found",
+  "actions": {
+    "refresh": {
+      "tooltip": "Refresh countries list"
+    }
+  },
+  "country": {
+    "fields": {
+      "capital": "Capital",
+      "currency": "Currency",
+      "language": "Language"
+    }
+  }
+}

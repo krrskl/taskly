@@ -1,0 +1,17 @@
+{
+  "steps": {
+    "welcome": {
+      "title": "Welcome to Taskly",
+      "description": "Taskly is your personal task manager, helping you stay organized and productive."
+    },
+    "features": {
+      "title": "Features",
+      "description": "Discover the powerful features of Taskly that make task management easy and efficient."
+    },
+    "get_started": {
+      "title": "Ready to start?",
+      "description": "Let's set up your account and get you started with Taskly.",
+      "button": "Get started"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "details": {
+    "sections": {
+      "status": {
+        "title": "Status"
+      },
+      "information": {
+        "title": "Information"
+      },
+      "actions": {
+        "title": "Actions",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "details": {
+        "title": "Details",
+        "fields": {
+          "createdAt": "Created At",
+          "updatedAt": "Updated At"
+        }
+      }
+    },
+    "title": "Todo details",
+    "deleteConfirmation": {
+      "title": "Confirm deletion",
+      "message": "Are you sure you want to delete this?",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    }
+  },
+  "create": {
+    "createTitle": "Create",
+    "updateTitle": "Update",
+    "fields": {
+      "title": {
+        "label": "Title",
+        "hint": "Enter todo title",
+        "required": "Title is required",
+        "minLength": "Title must be at least 3 characters"
+      },
+      "description": {
+        "label": "Description",
+        "hint": "Enter todo description"
+      }
+    },
+    "actions": {
+      "create": "Create",
+      "update": "Update"
+    }
+  }
+}

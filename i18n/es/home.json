@@ -1,0 +1,22 @@
+{
+  "actions": {
+    "add": {
+      "tooltip": "Agregar una nueva tarea"
+    },
+    "download": {
+      "tooltip": "Descargar tareas iniciales"
+    },
+    "countries": {
+      "tooltip": "Ver países"
+    }
+  },
+  "sections": {
+    "filter": {
+      "options": {
+        "all": "Todas",
+        "pending": "Pendientes",
+        "completed": "Completadas"
+      }
+    }
+  }
+}

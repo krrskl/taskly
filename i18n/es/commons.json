@@ -1,0 +1,12 @@
+{
+  "status": {
+    "completed": "Completado",
+    "pending": "Pendiente"
+  },
+  "errors": {
+    "unknown": "Ocurrió un error desconocido. \nPor favor, inténtalo de nuevo más tarde."
+  },
+  "actions": {
+    "retry": "Reintentar"
+  }
+}
