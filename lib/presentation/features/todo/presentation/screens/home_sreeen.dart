@@ -32,12 +32,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       title: 'Taskly',
       actions: [
         IconButton(
-          onPressed: () => Navigator.pushNamed(context, AppRoutes.createTask),
-          icon: const Icon(Icons.add),
-          tooltip: t.home.actions.add.tooltip,
-          color: context.colorScheme.primary,
-        ),
-        IconButton(
           onPressed: () => ref.read(todoListProvider.notifier).loadFromRemote(),
           tooltip: t.home.actions.download.tooltip,
           icon: const Icon(Icons.cloud_download_outlined),
@@ -69,6 +63,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 : const TodoListWidget(),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, AppRoutes.createTask),
+        tooltip: t.home.actions.add.tooltip,
+        child: const Icon(Icons.add),
       ),
     );
   }

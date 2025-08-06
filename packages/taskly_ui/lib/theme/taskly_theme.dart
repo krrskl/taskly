@@ -48,5 +48,9 @@ final appThemes = {
       selectedColor: kPrimaryColor,
       checkmarkColor: kWhiteColor,
     ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: kPrimaryColor,
+      foregroundColor: kWhiteColor,
+    ),
   ),
 };
