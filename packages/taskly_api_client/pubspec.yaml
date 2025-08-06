@@ -1,0 +1,21 @@
+name: taskly_api_client
+description: API client for Taskly app.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.8.0+1
+  freezed_annotation: ^3.1.0
+
+dev_dependencies:
+  taskly_commons_dependencies_dev:
+    path: ../taskly_commons_dependencies_dev
+  freezed: ^3.2.0
+
+flutter:
+  uses-material-design: true
