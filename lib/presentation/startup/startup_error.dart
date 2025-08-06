@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taskly_ui/taskly_ui.dart' show TextThemeX;
+import 'package:taskly_ui/taskly_ui.dart'
+    show CustomScaffold, CustomErrorWidget;
 import 'package:taskly_ui/theme/taskly_theme.dart' show appThemes, AppTheme;
 
 class StartupErrorWidget extends StatelessWidget {
@@ -18,20 +19,8 @@ class StartupErrorWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: appThemes[AppTheme.light],
       themeMode: ThemeMode.light,
-      home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(message, style: context.textTheme.bodySmall),
-              const SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: onRetry,
-                child: Text('Retry!', style: context.textTheme.labelLarge),
-              ),
-            ],
-          ),
-        ),
+      home: CustomScaffold(
+        child: CustomErrorWidget(errorMessage: message, onRetry: onRetry),
       ),
     );
   }

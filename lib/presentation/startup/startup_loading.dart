@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:taskly_ui/taskly_ui.dart';
-import 'package:taskly_ui/theme/taskly_theme.dart' show AppTheme, appThemes;
 
 class StartupLoadingWidget extends StatelessWidget {
   const StartupLoadingWidget({super.key});
