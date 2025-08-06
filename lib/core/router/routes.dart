@@ -3,4 +3,5 @@ class AppRoutes {
   static const home = '/home';
   static const onboarding = '/onboarding';
   static const createTask = '/create-task';
+  static const countries = '/countries';
 }
