@@ -1,9 +1,9 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart' show kReleaseMode, FlutterErrorDetails, FlutterError, PlatformDispatcher;
+import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:taskly/core/configs/environment.dart';
-import 'package:taskly_ui/utils/logger.dart' show Logger;
+import 'package:taskly/core/configs/environment.dart' show EnvironmentConfig;
+import 'package:taskly_ui/utils/utils.dart' show Logger;
 
 part 'startup_provider.g.dart';
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'startup_error.dart';
-import 'startup_loading.dart';
-import 'startup_provider.dart';
+import '../providers/startup_provider.dart';
+import 'startup_error_widget.dart';
+import 'startup_loading_widget.dart';
 
 class StartupWidget extends ConsumerWidget {
   final WidgetBuilder onLoaded;
