@@ -41,6 +41,9 @@ final appThemes = {
     ),
     appBarTheme: AppBarTheme(
       actionsPadding: EdgeInsets.symmetric(horizontal: 8.0),
+      iconTheme: IconThemeData(
+        color: kPrimaryColor,
+      ),
     ),
     chipTheme: ChipThemeData(
       backgroundColor: kCardColor,

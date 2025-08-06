@@ -31,7 +31,10 @@ class TextStyles {
     color: kErrorColor,
   );
 
-  static TextStyle bodySmall = _baseTextStyle.copyWith(fontSize: 14);
+  static TextStyle bodySmall = _baseTextStyle.copyWith(
+    fontSize: 12,
+    fontWeight: AppFontWeight.regular,
+  );
 
   static TextStyle bodyMedium = _baseTextStyle.copyWith(
     fontSize: 14,
