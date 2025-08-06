@@ -25,7 +25,7 @@ class CreateTodo extends _$CreateTodo {
       _loadTodo(todoId);
       return const AsyncValue.loading();
     }
-    
+
     return const AsyncValue.data(null);
   }
 
@@ -44,10 +44,7 @@ class CreateTodo extends _$CreateTodo {
     );
   }
 
-  Future<bool> saveTodo({
-    required String title,
-    String? description,
-  }) async {
+  Future<bool> saveTodo({required String title, String? description}) async {
     if (title.trim().isEmpty) {
       state = AsyncValue.error('Title cannot be empty', StackTrace.current);
       return false;

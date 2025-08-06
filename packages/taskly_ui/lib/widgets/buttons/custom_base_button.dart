@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../extensions/build_context.extensions.dart' show ColorSchemeX, TextThemeX;
+import '../../extensions/build_context.extensions.dart'
+    show ColorSchemeX, TextThemeX;
 import '../../theme/borders.dart' show borderRadiusSmall;
 import '../../theme/spacing.dart';
 import '../../typography/font_weights.dart' show AppFontWeight;
@@ -85,12 +86,15 @@ class CustomBaseButton extends StatelessWidget {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: color,
-            disabledBackgroundColor: context.colorScheme.onPrimary.withValues(alpha: .1),
+            disabledBackgroundColor: context.colorScheme.onPrimary.withValues(
+              alpha: .1,
+            ),
             shape: RoundedRectangleBorder(borderRadius: borderRadius),
             padding: padding ?? size.padding,
           ),
           onPressed: onPressed,
-          child: child ??
+          child:
+              child ??
               Row(
                 mainAxisAlignment: centered
                     ? MainAxisAlignment.center
@@ -99,11 +103,14 @@ class CustomBaseButton extends StatelessWidget {
                   if (text != null) ...[
                     Text(
                       text!,
-                      style: textStyle ??
+                      style:
+                          textStyle ??
                           context.textTheme.titleLarge?.copyWith(
                             color: !disabled
                                 ? textColor
-                                : context.colorScheme.onPrimary.withValues(alpha: .1),
+                                : context.colorScheme.onPrimary.withValues(
+                                    alpha: .1,
+                                  ),
                             fontSize: size.fontSize,
                             fontWeight: AppFontWeight.semiBold,
                           ),

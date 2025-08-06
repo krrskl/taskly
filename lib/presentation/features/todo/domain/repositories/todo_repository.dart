@@ -3,7 +3,7 @@ import '../entities/todo.dart';
 
 abstract class TodoRepository {
   Future<Result<List<Todo>>> getAllTodos();
-  
+
   Future<Result<List<Todo>>> getTodosFromRemote();
 
   Future<Result<List<Todo>>> getTodosByStatus(bool completed);

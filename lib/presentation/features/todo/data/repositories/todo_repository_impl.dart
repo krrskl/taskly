@@ -26,7 +26,10 @@ class TodoRepositoryImpl implements TodoRepository {
   Future<Result<List<Todo>>> getTodosFromRemote() async {
     try {
       final todoModels = await _remoteDataSource.getAllTodos();
-      final todos = todoModels.take(10).map((model) => model.toDomain()).toList();
+      final todos = todoModels
+          .take(10)
+          .map((model) => model.toDomain())
+          .toList();
       return Success(todos);
     } catch (e) {
       return Error(DatabaseFailure(message: e.toString()));

@@ -32,11 +32,7 @@ class CountryListWidget extends ConsumerWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
-            Icons.public_off,
-            size: 70,
-            color: context.colorScheme.outline,
-          ),
+          Icon(Icons.public_off, size: 70, color: context.colorScheme.outline),
           verticalSpaceSmall,
           Text(
             t.countries.empty,

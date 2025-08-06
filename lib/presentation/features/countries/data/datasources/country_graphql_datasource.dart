@@ -13,11 +13,14 @@ class CountryGraphqlDataSource implements CountryRemoteDataSource {
   Future<List<CountryModel>> getAllCountries() async {
     try {
       final result = await _graphql.query(getCountriesQuery);
-      
+
       final countriesData = result['countries'] as List<dynamic>;
-      
+
       return countriesData
-          .map((countryJson) => CountryModel.fromJson(countryJson as Map<String, dynamic>))
+          .map(
+            (countryJson) =>
+                CountryModel.fromJson(countryJson as Map<String, dynamic>),
+          )
           .toList();
     } catch (e) {
       throw Exception('Failed to fetch countries: $e');

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:taskly_ui/widgets/custom_circular_loading.dart' show CustomCircularLoading;
+import 'package:taskly_ui/widgets/custom_circular_loading.dart'
+    show CustomCircularLoading;
 
 import '../providers/splash_provider.dart' show initialValidationsProvider;
 
@@ -9,18 +10,11 @@ class SplashScreen extends ConsumerWidget {
 
   @override
   build(BuildContext context, WidgetRef ref) {
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) {
-        ref.watch(initialValidationsProvider).whenData(
-          (url) {
-            Navigator.pushReplacementNamed(
-              context,
-              url,
-            );
-          },
-        );
-      },
-    );
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.watch(initialValidationsProvider).whenData((url) {
+        Navigator.pushReplacementNamed(context, url);
+      });
+    });
 
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
@@ -39,9 +33,7 @@ class SplashScreen extends ConsumerWidget {
             Positioned(
               bottom: 250,
               left: MediaQuery.of(context).size.width / 2 - 20,
-              child: const CustomCircularLoading(
-                color: Colors.white,
-              ),
+              child: const CustomCircularLoading(color: Colors.white),
             ),
 
             const Align(

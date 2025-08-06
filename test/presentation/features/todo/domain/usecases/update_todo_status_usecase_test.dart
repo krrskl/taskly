@@ -51,7 +51,10 @@ void main() {
           expect(successResult.data.description, equals(testTodo.description));
           expect(successResult.data.createdAt, equals(testTodo.createdAt));
 
-          expect(successResult.data.updatedAt, isNot(equals(testTodo.updatedAt)));
+          expect(
+            successResult.data.updatedAt,
+            isNot(equals(testTodo.updatedAt)),
+          );
           expect(successResult.data.updatedAt, isA<DateTime>());
         },
       );

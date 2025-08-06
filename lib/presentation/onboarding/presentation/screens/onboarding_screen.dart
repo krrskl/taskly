@@ -46,11 +46,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               flex: 14,
               child: PageView.builder(
                 itemCount: onboardingSteps.length,
-                onPageChanged: (value) => setState(
-                  () {
-                    currentPage = value;
-                  },
-                ),
+                onPageChanged: (value) => setState(() {
+                  currentPage = value;
+                }),
                 itemBuilder: (context, index) => OnboardingContent(
                   icon: onboardingSteps[index]['icon'],
                   title: onboardingSteps[index]['title'],
@@ -67,7 +65,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   }
                 },
                 text: t.onboarding.steps.get_started.button,
-              )
+              ),
             ],
             const Spacer(),
             Row(

@@ -45,7 +45,7 @@ TodoApiDatasource todoApiDatasource(Ref ref) {
 TodoRepository todoRepository(Ref ref) {
   final localDataSource = ref.watch(todoLocalDataSourceProvider);
   final remoteDataSource = ref.watch(todoApiDatasourceProvider);
-  
+
   return TodoRepositoryImpl(localDataSource, remoteDataSource);
 }
 

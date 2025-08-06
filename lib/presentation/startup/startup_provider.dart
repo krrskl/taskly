@@ -10,7 +10,7 @@ part 'startup_provider.g.dart';
 @riverpod
 Future<void> startup(Ref ref) async {
   EnvironmentConfig.instance.load();
-  
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

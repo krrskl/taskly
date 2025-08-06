@@ -9,7 +9,12 @@ class CustomErrorWidget extends StatelessWidget {
   final String? retryMessage;
   final VoidCallback? onRetry;
 
-  const CustomErrorWidget({super.key, this.errorMessage, this.onRetry, this.retryMessage = 'Retry'});
+  const CustomErrorWidget({
+    super.key,
+    this.errorMessage,
+    this.onRetry,
+    this.retryMessage = 'Retry',
+  });
 
   @override
   Widget build(BuildContext context) {

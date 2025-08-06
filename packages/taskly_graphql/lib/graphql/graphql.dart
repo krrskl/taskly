@@ -10,7 +10,10 @@ class GraphqlImpl implements GraphQL {
   GraphqlImpl(this.client);
 
   @override
-  Future<Map<String, dynamic>> query(String query, {Map<String, dynamic>? variables}) {
+  Future<Map<String, dynamic>> query(
+    String query, {
+    Map<String, dynamic>? variables,
+  }) {
     final options = QueryOptions(
       document: gql(query),
       variables: variables ?? {},

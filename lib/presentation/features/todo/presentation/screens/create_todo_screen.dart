@@ -92,7 +92,6 @@ class _CreateTodoScreenState extends ConsumerState<CreateTodoScreen> {
       Result<Todo> result;
 
       if (_todoToEdit != null) {
-        
         final updateTodoUseCase = ref.read(updateTodoUseCaseProvider);
         result = await updateTodoUseCase(
           id: _todoToEdit!.id,
@@ -100,7 +99,6 @@ class _CreateTodoScreenState extends ConsumerState<CreateTodoScreen> {
           description: description.isEmpty ? null : description,
         );
       } else {
-        
         final addTodoUseCase = ref.read(addTodoUseCaseProvider);
         result = await addTodoUseCase(
           title: title,
@@ -131,7 +129,9 @@ class _CreateTodoScreenState extends ConsumerState<CreateTodoScreen> {
   @override
   Widget build(BuildContext context) {
     final isEditing = widget.todoId != null;
-    final title = isEditing ? t.todo.create.updateTitle : t.todo.create.createTitle;
+    final title = isEditing
+        ? t.todo.create.updateTitle
+        : t.todo.create.createTitle;
 
     return CustomScaffold(
       title: title,
@@ -231,7 +231,9 @@ class _CreateTodoScreenState extends ConsumerState<CreateTodoScreen> {
             verticalSpaceLarge,
 
             CustomPrimaryButton(
-              text: widget.todoId != null ? t.todo.create.actions.update : t.todo.create.actions.create,
+              text: widget.todoId != null
+                  ? t.todo.create.actions.update
+                  : t.todo.create.actions.create,
               loading: _isLoading,
               onPressed: _isLoading ? null : _saveTodo,
             ),

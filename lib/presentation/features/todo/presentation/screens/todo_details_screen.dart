@@ -47,7 +47,9 @@ class TodoDetailsScreen extends ConsumerWidget {
             title: t.todo.details.sections.status.title,
             children: [
               Text(
-                todo.completed ? t.commons.status.completed : t.commons.status.pending,
+                todo.completed
+                    ? t.commons.status.completed
+                    : t.commons.status.pending,
                 style: context.textTheme.titleMedium?.copyWith(
                   color: context.colorScheme.onSurfaceVariant,
                   fontWeight: FontWeight.bold,
@@ -117,8 +119,10 @@ class TodoDetailsScreen extends ConsumerWidget {
                       icon: Icons.edit,
                       textColor: context.colorScheme.primary,
                       disabled: todo.completed,
-                      disabledIconColor: context.colorScheme.onSurfaceVariant.withValues(alpha: 0.3),
-                      disabledTextColor: context.colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
+                      disabledIconColor: context.colorScheme.onSurfaceVariant
+                          .withValues(alpha: 0.3),
+                      disabledTextColor: context.colorScheme.onSurfaceVariant
+                          .withValues(alpha: 0.6),
                       onPressed: () {
                         HapticFeedback.lightImpact();
                         Navigator.pop(context);

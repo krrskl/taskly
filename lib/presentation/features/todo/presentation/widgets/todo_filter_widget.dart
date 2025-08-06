@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:taskly/presentation/i18n/translations.g.dart' show t;
-import 'package:taskly_ui/extensions/build_context.extensions.dart' show ColorSchemeX, TextThemeX;
+import 'package:taskly_ui/extensions/build_context.extensions.dart'
+    show ColorSchemeX, TextThemeX;
 import 'package:taskly_ui/theme/spacing.dart' show paddingAllRegular;
 
 import '../providers/todo_list_provider.dart' show todoListProvider;
@@ -57,9 +58,7 @@ class TodoFilterWidget extends ConsumerWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
       child: FilterChip(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         label: Text(
           label,
           style: context.textTheme.bodySmall?.copyWith(

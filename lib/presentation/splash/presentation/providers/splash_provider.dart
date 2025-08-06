@@ -6,7 +6,6 @@ import 'settings_provider.dart' show settingsProviderProvider;
 
 part 'splash_provider.g.dart';
 
-
 @riverpod
 Future<String> initialValidations(Ref ref) async {
   await Future.delayed(const Duration(seconds: 1));

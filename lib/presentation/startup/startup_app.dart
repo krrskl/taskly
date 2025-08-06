@@ -30,7 +30,7 @@ class StartupApp extends ConsumerWidget {
         AppRoutes.home: (_) => const HomeScreen(),
         AppRoutes.createTask: (context) {
           final args = ModalRoute.of(context)?.settings.arguments;
-          
+
           return CreateTodoScreen(todoId: args is int ? args : null);
         },
         AppRoutes.countries: (_) => CountriesScreen(),

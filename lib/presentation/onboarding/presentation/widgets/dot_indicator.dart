@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taskly_ui/extensions/build_context.extensions.dart';
 
 class DotIndicator extends StatelessWidget {
-  const DotIndicator({
-    super.key,
-    this.isActive = false,
-  });
+  const DotIndicator({super.key, this.isActive = false});
 
   final bool isActive;
 

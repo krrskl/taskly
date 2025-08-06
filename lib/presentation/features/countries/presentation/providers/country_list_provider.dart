@@ -55,10 +55,7 @@ class CountryList extends _$CountryList {
         );
       },
       (failure) {
-        state = state.copyWith(
-          isLoading: false,
-          error: failure.message,
-        );
+        state = state.copyWith(isLoading: false, error: failure.message);
       },
     );
   }
