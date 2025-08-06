@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:taskly/core/error/failure.dart';
 import 'package:taskly/core/utils/result.dart';
-import 'package:taskly/presentation/features/todo/domain/entities/todo.dart';
-import 'package:taskly/presentation/features/todo/domain/usecases/update_todo_status_usecase.dart';
+import 'package:taskly/features/todo/domain/entities/todo.dart';
+import 'package:taskly/features/todo/domain/usecases/update_todo_status_usecase.dart';
 
 import 'mocks/todo_repository_mock.dart' show MockTodoRepository;
 

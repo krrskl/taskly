@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:taskly/presentation/features/countries/domain/entities/country.dart';
-import 'package:taskly/presentation/features/countries/presentation/widgets/country_card.dart';
+import 'package:taskly/features/countries/domain/entities/country.dart';
+import 'package:taskly/features/countries/presentation/widgets/country_card.dart';
 import 'package:taskly/presentation/i18n/translations.g.dart';
 
 void main() {

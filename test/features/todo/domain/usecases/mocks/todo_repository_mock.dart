@@ -1,7 +1,7 @@
 import 'package:taskly/core/error/failure.dart';
 import 'package:taskly/core/utils/result.dart';
-import 'package:taskly/presentation/features/todo/domain/entities/todo.dart';
-import 'package:taskly/presentation/features/todo/domain/repositories/todo_repository.dart';
+import 'package:taskly/features/todo/domain/entities/todo.dart';
+import 'package:taskly/features/todo/domain/repositories/todo_repository.dart';
 
 class MockTodoRepository implements TodoRepository {
   Todo? _storedTodo;
